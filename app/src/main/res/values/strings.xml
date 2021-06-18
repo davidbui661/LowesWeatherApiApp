@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LowesWeatherApiApp</string>
+    <string name="hint">City Name</string>
+    <string name="search_button">Lookup</string>
+    <string name="weather_image">weather image</string>
+
+    <string name="feels_like"> Feels like: %s</string>
+    <string name="weather_temp">Temp: %s</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/search_fragment"
+    >
+
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.example.lowesweatherapiapp.ui.main.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment">
+        <action
+            android:id="@+id/action_from_search_fragment_to_list_fragment"
+            app:destination="@id/list_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/list_fragment"
+        android:name="com.example.lowesweatherapiapp.ui.main.WeatherFragment"
+        android:label="list_fragment"
+        tools:layout="@layout/list_fragment">
+        <action
+            android:id="@+id/action_from_list_fragment_to_details_fragment"
+            app:destination="@id/details_fragment"/>
+        <action
+            android:id="@+id/action_list_fragment_pop"
+            app:popUpTo="@+id/search_fragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/details_fragment"
+        android:name="com.example.lowesweatherapiapp.ui.main.WeatherDetailsFragment"
+        android:label="details_fragment"
+        tools:layout="@layout/details_fragment">
+        <action
+            android:id="@+id/action_from_details_fragment_pop"
+            app:popUpTo="@+id/search_fragment"
+            app:popUpToInclusive="false"
+            />
+    </fragment>
+</navigation>
